@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,sex){
+                this.name = name;
+                this.sex = sex;
+
+                this.say = function(){
+                    console.log('say something')
+                };
+            }
+
+            speak(){
+                console.log('speak something');
+            }
+
+            static speak(){
+                console.log('static speak something');
+            }
+        }
+        Person.version = '1.0';
+
+        // class Programmer extends Person{
+        //     constructor(name,sex){
+        //         super(name,sex);
+        //     }
+        // }
+
+        // 改写继承的属性或方法
+        class Programmer extends Person{
+            constructor(name,sex,features){
+                super(name,sex);
+                this.features = features;
+            }
+            // 同名覆盖
+            speak(){
+                console.log('Programmer speak');
+            }
+
+            static speak(){
+                console.log('Programmer static speak');
+            }
+
+            hi () {
+                console.log('hi');
+            }
+        }
+
+        const zs = new Programmer('zs', 'male', '秃头');
+        console.log(zs.name);
+        console.log(zs.sex);
+        console.log(zs.features)
+        zs.say();
+        zs.speak();
+        zs.hi();
+        Programmer.speak();
+        console.log(Programmer.version);
+    </script>
+</body>
+</html>

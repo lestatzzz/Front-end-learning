@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {text-decoration: none;}
+        ul {list-style: none;}
+        div {
+            background-image: url(http://climg.mukewang.com/582c37e50001b08102000065.jpg);
+            width: 100px;
+            height: 100px;
+            display: none;
+            border: 2px solid red;
+            background-repeat: no-repeat;
+        }
+        .length a:hover + div{
+            display: block;
+            background-size: 100px 100px;
+        }
+        .percent a:hover + div {
+            display: block;
+            background-size: 50% 50%;
+        }
+        .cover a:hover + div {
+            display: block;
+            background-size: cover;
+        }
+        .contain a:hover + div {
+            display: block;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <h2>background-size不同属性值不同效果</h2>
+    <ul>
+        <li class="length">
+            <a href="">100px 100px</a>
+            <div></div>
+        </li>
+        <li class="percent">
+            <a href="">50% 50%</a>
+            <div></div>
+        </li>
+        <li class="cover">
+            <a href="">cover</a>
+            <div></div>
+        </li>
+        <li class="contain">
+            <a href="">contain</a>
+            <div></div>
+        </li>
+
+    </ul>
+</body>
+</html>

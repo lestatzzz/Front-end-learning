@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhr方法</title>
+</head>
+<body>
+    <script>
+        // 1. abort() 
+        // 终止当前请求
+        // 一般配合abort事件一起使用
+        // const url = 'https://www.imooc.com/api/http/search/suggest?word=js';
+        // const xhr = new XMLHttpRequest();
+        // xhr.onreadystatechange = () => {
+        //     if (xhr.readyState !== 4) {
+        //         return;
+        //     };
+            
+        //     if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+        //         console.log(xhr.response);
+        //     };
+        // }
+
+        // xhr.open('GET', url, true);
+        // xhr.send(null);
+
+        // xhr.abort();
+
+        // 2. setRequestHeader()
+        // 可以设置请求头信息
+        // xhr.setRequestHeader(头部字段的名称,头部字段的值)
+        // const url = 'https://www.imooc.com/api/http/search/suggest?word=js';
+        const url = 'https://www.imooc.com/api/http/json/search/suggest?word=js';
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== 4) {
+                return;
+            };
+            
+            if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                console.log(xhr.response);
+            };
+        }
+
+        xhr.open('POST', url, true);
+        // 请求头中的Content-Type字段来告诉服务器,浏览器发送的数据是什么格式的
+        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+        // xhr.send('username=alex&age=18');
+
+        // json格式
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            username: 'alex'
+        }))
+    </script>
+</body>
+</html>

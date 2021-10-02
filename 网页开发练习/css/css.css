@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #07cbc9;
+    position: relative;
+}
+header .center {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    overflow: hidden;
+}
+header .center .logo {
+    float: left;
+    height: 48px;
+    margin-top: 16px;
+}
+header .center nav {
+    float: right;
+}
+header .center nav ul {
+    list-style: none;
+    height: 80px;
+}
+header .center nav ul li{
+    float: left;
+    margin-right: 20px;
+    line-height: 80px;
+    font-size: 16px;
+}
+.banner {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.banner .banner-pic img{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+}
+.banner .banner-mask {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+}
+.banner .banner-form form{
+    position: absolute;
+    width: 504px;
+    left: 50%;
+    margin-left: -252px;
+    top: 50%;
+    margin-top: -175px;
+    text-align: center;
+}
+.banner .banner-form form input {
+    width: 504px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid #808080;
+}
+.banner .banner-form form textarea {
+    width: 504px;
+    height: 110px;
+    background: none;
+    border: 1px solid #808080;
+}
+.banner .banner-form form input:last-child {
+    width: 200px;
+    margin-top: 20px;
+    color: #808080;
+}
+main .about .brief h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 30px;
+}
+main .about .brief .cut-line {
+    width: 60px;
+    height: 3px;
+    background-color: #07cbc9;
+    margin: 10px auto;
+}
+main .about .brief p {
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+main .about .detail-info {
+    width: 1200px;
+    height: 464px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+main .about .detail-info h2 {
+    float: left;
+    margin-top: 30px;
+}
+main .about .detail-info .info {
+    position: absolute;
+    margin-top:105px;
+    width: 300px;
+    height: 160px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid gray;
+    background: rgba(255,255,255,.5);
+}
+main .about .detail-info .info .exp-button {
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    margin-top: 10px;
+    text-align: center;
+}
+main .about .detail-info .info .exp-button a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+}
+main .about .detail-info .stu-img {
+    float: left;
+    width: 600px;
+    height: 434px;
+    margin-top: 30px;
+    margin-left: 160px;
+}
+main .about .detail-info .stu-img img {
+    width: 600px;
+    height: 434px;
+}
+main .about .detail-info .numbers {
+    float: right;
+    margin-top: 30px;
+    width: 300px;
+    height: 450px;
+}
+main .about .detail-info .stu-num {
+    width: 260px;
+    height: 80px;
+    border: 1px solid #07cbc9;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+main .about .detail-info .stu-num p {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+main .about .detail-info .stu-num p:last-child {
+    font-weight: normal;
+    font-size: 18px;
+}
+main .about .detail-info .stu-num .cut-line {
+    width: 60px;
+    height: 3px;
+    background-color: #07cbc9;
+    margin: 10px auto;
+}
+main .about .detail-info .fac-num {
+    width: 260px;
+    height: 80px;
+    border: 1px solid #07cbc9;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+main .about .detail-info .fac-num p {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+main .about .detail-info .fac-num p:last-child {
+    font-weight: normal;
+    font-size: 18px;
+}
+main .about .detail-info .fac-num .cut-line {
+    width: 60px;
+    height: 3px;
+    background-color: #07cbc9;
+    margin: 10px auto;
+}
+/* content图文混排区域 */
+main .content {
+    width: 100%;
+    height: 760px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+main .content img {
+    float: left;
+    width: 25%;
+    height: 380px;
+    display: block;
+}
+main .content .arrow::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -20px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+}
+main .content .arrow-left::before {
+    border-right-color: #07cbc9;
+    left: -40px;
+}
+main .content .arrow-right::before {
+    border-left-color: #07cbc9;
+    right: -40px;
+}
+main .content .img1-info {
+    width: 25%;
+    height: 380px;
+    float: left;
+    background-color: #07cbc9;
+    position: relative;
+} 
+main .content .img1-info h3 {
+    font-size: 24px;
+    color: white;
+    margin: 20px 20px 20px 30px;
+}
+main .content .img1-info p.para1{
+    font-size: 16px;
+    color: white;
+    margin: 30px;
+}
+main .content .img1-info p.para2 {
+    margin: 30px;
+    font-size: 14px;
+    color: gray;
+}
+main .content .img1-info .exp-button {
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    margin: 30px auto;
+    text-align: center;
+}
+main .content .img1-info .exp-button a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+main .content .img2-info {
+    width: 25%;
+    height: 380px;
+    float: left;
+    background-color: #07cbc9;
+    position: relative;
+}
+main .content .img2-info h3 {
+    font-size: 24px;
+    color: white;
+    margin: 20px 20px 20px 30px;
+}
+main .content .img2-info p.para1{
+    font-size: 16px;
+    color: white;
+    margin: 30px;
+}
+main .content .img2-info p.para2 {
+    margin: 30px;
+    font-size: 14px;
+    color: gray;
+}
+main .content .img2-info .exp-button {
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    margin: 30px auto;
+    text-align: center;
+}
+main .content .img2-info .exp-button a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+main .content .img3-info {
+    width: 25%;
+    height: 380px;
+    float: left;
+    background-color: #07cbc9;
+    position: relative;
+}
+main .content .img3-info h3 {
+    font-size: 24px;
+    color: white;
+    margin: 20px 20px 20px 30px;
+}
+main .content .img3-info p.para1{
+    font-size: 16px;
+    color: white;
+    margin: 30px;
+}
+main .content .img3-info p.para2 {
+    margin: 30px;
+    font-size: 14px;
+    color: gray;
+}
+main .content .img3-info .exp-button {
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    margin: 30px auto;
+    text-align: center;
+}
+main .content .img3-info .exp-button a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+main .content .img4-info {
+    width: 25%;
+    height: 380px;
+    float: left;
+    background-color: #07cbc9;
+    position: relative;
+}
+main .content .img4-info h3 {
+    font-size: 24px;
+    color: white;
+    margin: 20px 20px 20px 30px;
+}
+main .content .img4-info p.para1{
+    font-size: 16px;
+    color: white;
+    margin: 30px;
+}
+main .content .img4-info p.para2 {
+    margin: 30px;
+    font-size: 14px;
+    color: gray;
+}
+main .content .img4-info .exp-button {
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    margin: 30px auto;
+    text-align: center;
+}
+main .content .img4-info .exp-button a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+}
+/* gallery */
+main .gallery .gallery-brief-info {
+    width: 100%;
+}
+main .gallery .gallery-brief-info h2 {
+    text-align: center;
+    font-size: 50px;
+}
+main .gallery .gallery-brief-info .cut-line {
+    width: 60px;
+    height: 3px;
+    background-color: #07cbc9;
+    margin: 10px auto;
+}
+main .gallery .gallery-brief-info p {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+main .gallery .gallery-detail-info {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+main .gallery .gallery-detail-info .dl1 {
+    float: left;
+    margin: 20px 20px 40px 30px;
+}
+main .gallery .gallery-detail-info .dl1 dt img {
+    width: 360px;
+    height: 250px;
+    display: block;
+}
+main .gallery .gallery-detail-info .dl1 dd {
+    width: 340px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+main .gallery .gallery-detail-info .dl2 { 
+    float: left;
+    margin: 20px 20px 40px 30px;
+}
+main .gallery .gallery-detail-info .dl2 dt img {
+    width: 360px;
+    height: 250px;
+    display: block;
+}
+main .gallery .gallery-detail-info .dl2 dd {
+    width: 340px;
+    height: 40px; 
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+main .gallery .gallery-detail-info .dl3 { 
+    float: left;
+    margin-top: 20px;
+    margin-left:20px;
+}
+main .gallery .gallery-detail-info .dl3 dt img {
+    width: 360px;
+    height: 250px;
+    display: block;
+}
+main .gallery .gallery-detail-info .dl3 dd {
+    width: 340px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+main .gallery .gallery-detail-info .dl4 {
+    float: left;
+    margin: 0px 20px 40px 30px;
+}
+main .gallery .gallery-detail-info .dl4 dt img {
+    width: 360px;
+    height: 250px;
+    display: block;
+}
+main .gallery .gallery-detail-info .dl4 dd {
+    width: 340px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+main .gallery .gallery-detail-info .dl5{
+    float: left;
+    margin: 0px 20px 40px 30px;
+}
+main .gallery .gallery-detail-info .dl5 dt img {
+    width: 360px;
+    height: 250px;
+    display: block;
+}
+main .gallery .gallery-detail-info .dl5 dd {
+    width: 340px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+main .gallery .gallery-detail-info .dl6{
+    float: left;
+    
+    margin-left:20px;
+}
+main .gallery .gallery-detail-info .dl6 dt img {
+    width: 360px;
+    height: 250px;
+    display: block;
+}
+main .gallery .gallery-detail-info .dl6 dd {
+    width: 340px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #07cbc9;
+}
+footer p {
+    line-height: 80px;
+    text-align: center;
+}

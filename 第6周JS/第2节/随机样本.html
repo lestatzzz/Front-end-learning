@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [3, 6, 10, 5, 8, 9];
+
+        // 结果数组
+        var result = [];
+        for (var i = 0; i < 3; i ++) {
+            // 随机选择一项的下标,数组的下标0-arr.length-1
+            // 随机数公式 parseInt(Math.random() * (b - a + 1)) + a;  
+            var  n = parseInt(Math.random() * arr.length); 
+            // 把这项推入结果数组
+            result.push(arr[n]);
+            // 删除这项,防止重复被随机到
+            arr.splice(n, 1);
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

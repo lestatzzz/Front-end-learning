@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function factorial(n) {
+            var sum = 1;
+            for (var j = 1; j <= n; j++) {
+                sum *= j;
+            }
+            return sum;
+        }
+
+        function searchLaBaHua() {
+            var arr = [];
+            for (var i = 100; i < 1000; i++) {
+                var char = i.toString();
+                var a = Number(char[0]);
+                var b = Number(char[1]);
+                var c = Number(char[2]);
+                if (i == factorial(a) + factorial(b) + factorial(c)) {
+                    arr.push(i);
+                }
+            }
+            return arr;
+        }
+
+        var Labahua = searchLaBaHua();
+        console.log(Labahua);
+    </script>
+</body>
+</html>

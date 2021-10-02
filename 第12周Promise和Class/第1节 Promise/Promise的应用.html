@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="https://img.mukewang.com/5e6af63d00011da318720764.jpg" alt="" id="img" />
+    <script>
+        // 1. 异步加载图片
+        const loadingAsync = url => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                
+                img.src = url;
+                
+                img.onload = () => {
+                    resolve(img);
+                };
+
+                img.onerror = () => {
+                    reject(new Error(`Could not load image at ${url}`));
+                };
+
+            });
+        };
+        const imgDOM = document.getElementById('img');
+        loadingAsync("https://img.mukewang.com/5f057a6a0001f4f918720764.jpg").then(img => {
+            console.log(img.src);
+            setTimeout(() => {
+                imgDOM.src = img.src;
+            }, 1000);
+        }).catch(err => {
+            console.log(err);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 原数组
+        var arr1 = [33, 44, 11, 22, [77, 88]];
+
+        // 递归函数
+        function deepClone(arr) {
+            var result = [];
+            // 遍历数组每一项
+            for (var i = 0; i < arr.length; i++) {
+                // 类型判断, 如果遍历到的项是数组
+                if (Array.isArray(arr[i])) {
+                    // 递归
+                    deepClone(arr[i]);
+                } else {
+                    // 如果遍历到的不是数组,则推入结果数组中
+                    // 相当于是递归的出口
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+
+        var arr2 = deepClone(arr1);
+        console.log(arr2);
+        console.log(arr2 == arr1);
+        console.log(arr2[4] == arr1[4]);
+    </script>
+</body>
+</html>

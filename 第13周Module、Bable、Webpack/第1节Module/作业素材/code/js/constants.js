@@ -1,0 +1,9 @@
+// base
+const ELEMENT_NODE = 1;
+const SLIDER_ANIMATION_CLASSNAME = 'slider-animation';
+
+// keyboard
+const LEFT_KEYCODE = 37;
+const RIGHT_KEYCODE = 39;
+
+export {ELEMENT_NODE, SLIDER_ANIMATION_CLASSNAME, LEFT_KEYCODE, RIGHT_KEYCODE};

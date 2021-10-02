@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var answer = parseInt(Math.random() * 98) + 2;
+        // 此时范围的最大值和最小值
+        var min = 1;
+        var max = 100;
+        // while (true) {
+        //     var n = Number(prompt('请输入你猜的数字' + min + '~' + max));
+        //     // 验证用户输入的数字是否在区间内
+        //     if (n <= min || n >= max) {
+        //         alert('输入的数字不在范围内，请重新输入数字！');
+        //         continue;
+        //     }
+        //     if (n < answer) {
+        //         alert('输入的数字太小了');
+        //         min = n;
+        //         continue;
+        //     } else if (n > answer) {
+        //         alert('输入的数字太大了');
+        //         max = n;
+        //         continue;
+        //     } else {
+        //         alert('恭喜你，猜对了！');
+        //         break;
+        //     }
+        // }
+
+
+        do {
+            var n = Number(prompt('请输入你猜的数字' + min + '~' + max));
+            // 验证用户输入的数字是否在区间内
+            if (n <= min || n >= max) {
+                alert('输入的数字不在范围内，请重新输入数字！');
+                continue;
+            }
+            if (n < answer) {
+                alert('输入的数字太小了');
+                min = n;
+                continue;
+            } else if (n > answer) {
+                alert('输入的数字太大了');
+                max = n;
+                continue;
+            }
+        } while (n != answer);
+        alert('恭喜你，猜对了！');
+    </script>
+</body>
+
+</html>

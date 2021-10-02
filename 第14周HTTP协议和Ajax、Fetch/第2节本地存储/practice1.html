@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="login" action="https://www.imooc.com" method="post">
+        用户名:<input type="text" name="username" id="username" placeholder="请输入用户名"><br>
+        <input type="submit" value="登录" id="loginBtn">
+        <input type="reset" value="删除" id="resetBtn">
+    </form>
+    <script type="module">
+        import {set, get,remove} from "./cookie的封装/cookie.js";
+        // const loginForm = document.getElementById('login');
+        window.onload = function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const oUsername = document.getElementById('username');
+            if (get('username')) {
+                oUsername.value = get('username');
+            }
+            loginBtn.addEventListener(
+                'click', 
+                ()=>{
+                    // const username = loginForm.username.value;
+                    set('username', username,{maxAge: 24*3600});
+                    // oUsername.value = get('username');
+                },
+                false
+            );
+            
+    
+            resetBtn.addEventListener(
+                'click', 
+                ()=>{
+                    remove('username');
+                }
+            );
+        }
+
+    </script>
+</body>
+
+</html>

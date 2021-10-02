@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age = Number(prompt('请输入年龄'));
+        // 判断年龄是否合法
+        if (age <= 0) {
+            alert('输入的年龄不合法');
+            age = Number(prompt('请重新输入年龄'));
+        }
+        var date = Number(prompt('请输入星期（0表示周日，1-6分别代表周一至周六）'));
+        if (!(date >= 0 && date <= 6)) {
+            alert('输入的星期不合法');
+            date = Number(prompt('请重新输入日期'));
+        }
+        if (age >= 10) {
+            if (date >= 1 && date <= 5) {
+                alert('票价为300元')
+            } else if (date == 0 || date == 6) {
+                alert('票价为500元');
+            }
+        } else if (age < 10 && age > 0) {
+            if (date >= 1 && date <= 5) {
+                alert('票价为140元')
+            } else if (date == 0 || date == 6) {
+                alert('票价为210元');
+            }
+        }
+    </script>
+</body>
+</html>

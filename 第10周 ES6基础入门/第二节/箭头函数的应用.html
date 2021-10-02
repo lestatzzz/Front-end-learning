@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 20px;
+            margin: 100px 100px;
+            cursor: pointer;
+        }
+        span {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">开始</button>
+    <span id="result">0</span>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const result = document.getElementById('result');
+
+        const timer = {
+            time: 0,
+            start: function () {
+                btn.addEventListener('click',  () => {
+                    setInterval(() =>{
+                        this.time++;
+                        result.innerHTML = this.time;
+                    }, 1000)
+                }, false)
+            }
+        }
+
+        timer.start();
+    </script>
+</body>
+</html>

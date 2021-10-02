@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var xiaoming = {
+            name: '小明',
+            age: '12',
+            sex: '男',
+            sayHello: function () {
+                console.log('你好我是' + xiaoming.name + ',我' + xiaoming.age + '岁了,我是一个' + xiaoming.sex + '生');
+            },
+            sleep: function () {
+                console.log('小明开始睡觉zzzzz');
+            }
+        };
+        var xiaohong = {
+            name: '小红',
+            age: '11',
+            sex: '女',
+            sayHello: function () {
+                console.log('你好我是' + xiaohong.name + ',我' + xiaohong.age + '岁了,我是一个' + xiaohong.sex + '生');
+            },
+            sleep: function () {
+                console.log('小红开始睡觉zzzzz');
+            }
+        };
+
+        xiaoming.sayHello();
+        xiaohong.sayHello();
+        xiaoming.sleep();
+        xiaohong.sleep();
+    </script>
+</body>
+
+</html>

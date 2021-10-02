@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">;
+        // 1. 基本用法
+        // export声明或语句
+        // export const age = 18;
+        
+        //const age = 18;
+        // export {age};
+
+        // 不能随意命名
+        // import {age} from './module.js';
+        // console.log(age);
+        
+        // 2. 导出多个
+        // import {fn} from "./module.js";
+        // console.log(fn);
+        // import {ClassName} from './module.js';
+        // console.log(ClassName);
+
+        // export {fn as func, ClassName, age};
+        // import {func, ClassName as Person, age} from "./module.js";
+
+        // console.log(func);
+        // console.log(Person);
+        // console.log(age);
+
+
+        // 整体导入
+        // 会导入所有输出,包括export default导出的
+        // import {func, ClassName, age} from "./module.js";
+        // import * as obj from "./module.js";
+        // console.log(obj);
+
+        // 同时导入
+        // import {func, ClassName, age} from "./module.js";
+        // import age2 from "./module.js";
+
+        // 一定是export default的在前
+        import age2, {func, ClassName, age} from "./module.js";
+    </script>
+</body>
+</html>

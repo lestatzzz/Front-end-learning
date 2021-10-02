@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 */
+        .box .spec {
+            color: red;
+        }
+
+        .box2 ul li .spec em {
+            color: red;
+        }
+
+        /* 交集选择器 */
+        h2.spec {
+            font-style: italic;
+        }
+
+        /* 并集选择器 */
+        ul, ol {
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>我是段落</p>
+        <p class="spec">我是段落</p>
+        <h2 class="spec">我是二级标题</h2>
+        <p>我是段落</p>
+    </div>
+
+    <div class="box1">
+        <ul>
+            <li>我是无序列表</li>
+            <li>我是无序列表</li>
+            <li>我是无序列表</li>
+            <li>我是无序列表</li>
+        </ul>
+
+        <ol>
+            <li>我是有序列表</li>
+            <li>我是有序列表</li>
+            <li>我是有序列表</li>
+            <li>我是有序列表</li>
+        </ol>
+    </div>
+
+    <div class="box2">
+        <ul>
+            <li>
+                <p class="spec">
+                    我是段落
+                    <em>强调文字</em>
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

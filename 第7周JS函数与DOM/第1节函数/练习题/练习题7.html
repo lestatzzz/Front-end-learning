@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = prompt('请输入您的密码');
+        function funName(userPwd) {
+            if (userPwd.length >= 6 && userPwd.length <= 12) {
+                return '密码格式正确';
+            } else if (userPwd.length < 6) {
+                return '密码不能小于6位数';
+            } else if (userPwd.length > 12) {
+                return '密码不能大于12位数';
+            }
+        }
+        alert(funName(input));
+    </script>
+</body>
+</html>

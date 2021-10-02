@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list">
+        <!-- <dl>
+            <dt>前端</dt>
+            <dd>Vue</dd>
+            <dd>Vue</dd>
+            <dd>Vue</dd>
+        </dl> -->
+    </div>
+    <script>
+        var classfies = {
+            "前端": ['Vue', 'Angular', 'React'],
+            "后端": ['Php', 'Java', 'Python'],
+        }
+        let htmlStr = '';
+        // console.log(Object.entries(classfies));
+        const list = document.getElementById('list');
+
+        for(const [key, value] of Object.entries(classfies)) {
+            var str = `<dt>${key}</dt>`;
+            for (item of value) {
+                str += `<dd>${item}</dd>`;
+            }
+            htmlStr += str;
+            list.innerHTML = htmlStr;
+        };
+
+    </script>
+</body>
+</html>

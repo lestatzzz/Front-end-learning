@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">
+        <ul>
+            <li>牛奶</li>
+            <li>咖啡</li>
+            <li>可乐</li>
+        </ul>
+    </div>
+
+    <div id="box2"></div>
+    
+    <script>
+        var box1 = document.getElementById('box1');
+        var box2 = document.getElementById('box2');
+        var theul = box1.getElementsByTagName('ul')[0];  // 即使只有一个ul标签,也是数组,所以要采用这种书写方式得到这个个ul标签
+        // 克隆节点
+        // var new_ul = theul.cloneNode(); // 只克隆了ul标签,内部的li标签没有克隆
+        var new_ul = theul.cloneNode(true);  // 深度克隆
+        box2.appendChild(new_ul);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON的3种形式</title>
+</head>
+<body>
+    <script>
+        // 1. 简单值形式
+        // .json
+        // JSON的简单值形式就对应着JS中的基础数据类型
+        // 数字、字符串、布尔值、null
+        // 与字符串有关的必须用双引号
+        // JSON中不支持undefined,但可以写字符串
+        // JSON中不能狗注释
+
+        const url = 'https://www.imooc.com/api/http/search/suggest?word=js';
+        const xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== 4) {
+                return;
+            };
+
+            if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                console.log(xhr.responseText);
+                console.log(typeof xhr.responseText);
+            };
+        }
+
+        // xhr.open('GET', './plain.json', true);
+        // xhr.open('GET', './obj.json', true);
+        xhr.open('GET', './array.json', true);
+        xhr.send(null);
+        // xhr.send({
+        //     username: 'alex',
+        //     age: 18
+        // });
+
+
+        // 2. 对象形式
+        // JSON的对象形式就对应着JS中的对象
+        // JSON中对象的属性名必须用双引号,属性值如果是字符串也必须用双引号
+        // 不支持undefined
+
+        // 3. 数组形式
+        // JSON的数组形式对应着JS中的数组
+        // 数组中的字符串必须用双引号
+        // JSON中只要涉及到字符串,就必须是用双引号
+        // 不支持undefined
+    </script>
+</body>
+</html>

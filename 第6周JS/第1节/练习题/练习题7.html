@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sex = prompt('请输入性别');
+        var height = Number(prompt('请输入身高(单位:cm)'));
+        var weight = Number(prompt('请输入体重(单位:kg)'));
+
+        if (sex == '男' || sex == 'male') {
+            var standardMaleWeight = (height - 80) * 0.7;
+            if (weight >= standardMaleWeight - standardMaleWeight * 0.05 && weight <= standardMaleWeight + standardMaleWeight * 0.05) {
+                alert('体重正常');
+            } else if (weight < standardMaleWeight - standardMaleWeight * 0.05) {
+                alert('偏瘦');
+            } else {
+                alert('偏胖');
+            }
+        } else if (sex == '女' || sex == 'female') {
+            var standardFemaleWeight = (height - 70) * 0.6;
+            if (weight >= standardFemaleWeight - standardFemaleWeight * 0.05 && weight <= standardFemaleWeight + standardFemaleWeight * 0.05) {
+                alert('体重正常');
+            } else if (weight < standardFemaleWeight - standardFemaleWeight * 0.05) {
+                alert('偏瘦');
+            } else {
+                alert('偏胖');
+            }
+        }
+    </script>
+</body>
+</html>

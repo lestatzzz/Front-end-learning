@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 324px;
+            margin: 0 auto;
+        }
+        button {
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 3px;
+            background: #f01414;
+            color: #fff;
+        }
+        #inrto {
+            width: 300px;
+            min-height: 100px;
+            line-height: 20px;
+            padding: 10px;
+            border: 2px solid gray;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <button id="btn">添加</button>
+        <div id="intro"></div>
+    </div>
+
+    <script>
+        const oIntro = document.getElementById('intro');
+        const obj1 = {name: '大话西游之月光宝盒',
+                      director:'刘镇伟', 
+                      main_character:'周星驰/吴孟达/罗家英',
+                      movie_type:'喜剧',
+                      year:2004,
+                      brief_intro:'...'};
+        const obj2 = {name: '功夫',
+                      director:'周星驰', 
+                      main_character:'周星驰/黄圣依',
+                      movie_type:'喜剧',
+                      year:2014,
+                      brief_intro:'...'};
+        const func = ({...obj} = {obj1}) => {
+            oIntro.innerHTML = `<h2>名称:${obj.name}</h2>
+                                导演:${obj.director}<br>
+                                主演:${obj.main_character}<br>
+                                类型:${obj.movie_type}<br>
+                                上映年份:${obj.year}<br>
+                                简介:${obj.brief_intro}`;
+        }
+        oIntro.innerHTML = `<h2>名称:${obj1.name}</h2>
+                            导演:${obj1.director}<br>
+                            主演:${obj1.main_character}<br>
+                            类型:${obj1.movie_type}<br>
+                            上映年份:${obj1.year}<br>
+                            简介:${obj1.brief_intro}`;
+        const oBtn = document.getElementById('btn');
+        oBtn.onclick = function() {
+            func(obj2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var towel, toothbrush, toothpaste, methods = 0, sum = 0;
+        for (towel = 1; towel <= 20; towel++) {
+            for (toothbrush = 1; toothbrush <= 50; toothbrush++) {
+                for (toothpaste = 1; toothpaste <= 10; toothpaste++) {
+                    sum = towel * 5 + toothbrush * 2 + toothpaste * 10;
+                    if (sum == 100) {
+                        methods += 1;
+                        continue;
+                    }
+                }
+            }
+        }
+        document.write(methods);
+    </script>
+</body>
+</html>

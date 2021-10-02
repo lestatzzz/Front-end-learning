@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jquery</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>ES6</li>
+    </ul>
+
+    <script>
+        let lis = document.getElementsByTagName('li');
+
+        for (let i = 0; i < lis.length; i++) {
+            let temp = lis[i].innerText;
+            lis[i].addEventListener('mouseenter', function(){
+                lis[i].innerText = '第' + (i+1) + '个';
+                lis[i].style.fontSize = 30 + 'px';
+                lis[i].style.color = 'red';
+            },false);
+            lis[i].addEventListener('mouseleave', function(){
+                lis[i].innerText = temp;
+                lis[i].style.fontSize = 16 + 'px';
+                lis[i].style.color = 'black';
+            },false);
+        }
+    </script>
+</body>
+
+</html>

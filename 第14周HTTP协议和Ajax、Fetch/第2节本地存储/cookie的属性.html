@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. cookie的名称(Name)和值(Value)
+        // 最重要的两个属性,创建cookie的时候必须填写,其他属性可以使用默认值
+
+        // cookie的名称或值如果包含非英文字母,则写入时需要使用encodeURIComponent()编码,读取时使用decodeURIComponent()解码
+
+        //document.cookie = `username=${encodeURIComponent('张三')}`;
+        // 一般名称使用英文字母,不要用中文,值可以用中文,但需要编码
+
+
+        // 2. 失效(到期)时间
+        // 对于失效的cookie,会被浏览器清除
+        // 如果没有设置失效时间,这样的cookie称为 session cookie
+        // 它存在于内存中,当会话结束,也就是浏览器关闭时,cookie消失
+
+        // 想长时间存在,设置expires或max age
+        // expires值为Date类型
+        // document.cookie = `username=alex; expires=${new Date (
+        //     '2100-1-01 00:00:00'
+        // )}`;
+
+        // max-age
+        // 值为数字,表示当前时间,多少秒后过期,单位是妙
+        // document.cookie = 'username=alex; max-age=5';
+        // document.cookie = `username=alex; max-age=${24 * 3600 * 30}`;  // 存活30天
+
+        // 如果max-age的值是0或者是负数,则cookie会被删除
+
+        // 3. Domain域
+        // Domain限定了访问cookie的范围(不同域名)
+        // 使用js只能读写当前域或父域的cookie,无法读写其他域的cookie
+
+        // www.imooc.com m.imooc.com
+        // 父域: .imooc.com
+        // document.cookie = 'username=alex; domain=www.imooc.com';
+
+
+        // 4.Path路径
+        // path限定了访问cookie的范围(同一域名)
+        // 使用js只能读写当前路径和上级路径的cookie,无法读写下级路径的cookie
+        // document.cookie = 'username=alex; path=/course';
+
+        // 当Name、Domain、Path这3个字段都相同的时候,才是同一个cookie
+
+        // 5. HTTPOnly
+        // 设置了HTTPOnly属性的Cookie不能通过Js去访问
+
+        // 6. Secure安全标志
+        // Secure限定了只有在使用了https而不是http的情况下才可以发送给服务器
+
+        // Domain、Path、Secure都要满足条件,还不能过期的cookie才能随着请求发送到服务器
+    </script>
+</body>
+</html>

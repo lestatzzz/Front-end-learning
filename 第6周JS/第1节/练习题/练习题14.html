@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pwd, pwdAgain;
+        while (pwd != '123456') {
+            pwd = prompt('请输入密码');
+            while (pwd == '123456') {
+                pwdAgain = prompt('请再次输入密码');
+                if (pwdAgain == pwd) {
+                    alert('两次输入的密码一致');
+                    break;
+                } else {
+                    continue;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

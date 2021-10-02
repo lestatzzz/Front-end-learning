@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var countNum = Number(localStorage.getItem('count'));
+        // console.log(countNum)
+        if (countNum == 0) {
+            countNum = 1;
+            localStorage.setItem('count', countNum);
+        } else if (countNum != 0){
+            countNum += 1;
+            localStorage.setItem('count', countNum);
+        }
+        const p = document.createElement('p');
+        p.innerHTML = `这是您第${countNum}次访问该页面`;
+        document.body.appendChild(p);
+    </script>
+</body>
+</html>

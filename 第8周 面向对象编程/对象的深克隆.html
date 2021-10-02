@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj1 = {
+            a: 1,
+            b: 2,
+            c: [33, 44, {
+                m: 55,
+                n: 66,
+                p: [77, 88]
+            }]
+        }
+
+        function deepclone(o) {
+            // 要判断o是对象还是数组
+            if (Array.isArray(o)) {  // 数组的typeof检测结果也是object
+                // 数组
+                var result = [];
+                for (var i = 0; i < o.length; i++) {
+                    result.push(deepclone(o[i]));
+                }
+            } else if (typeof o == 'object') { // 只有真正的对象才会在这一层
+                // 对象
+                var result = {};
+                for (var k in o) {
+                    result[k] = deepclone(o[k]);
+                }
+            } else {
+                // 基本类型值
+                var result = o;
+            }
+            return result;
+        }
+
+        var obj2 = deepclone(obj1);
+        console.log(obj2);
+        
+        console.log(obj1.c == obj2.c);  // false
+    </script>
+</body>
+
+</html>

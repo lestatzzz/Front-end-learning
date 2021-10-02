@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. JSON是什么
+        // Ajax发送和接收数据的一种格式
+        // 全称为 JavaScript Object Notation
+
+        // 2. 为什么需要JSON
+        // JSON有3种格式,每种形式的写法都和JS中的数据类型很像,可以很轻松的和JS中的数据类型互相转换
+
+        // JS-->JSON-->PHP/JAVA
+        // PHP/JAVA-->JSON-->JS
+        
+        const url = 'https://www.imooc.com/api/http/search/suggest?word=js';
+        const xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== 4) {
+                return;
+            };
+
+            if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                console.log(xhr.responseText);
+                console.log(typeof xhr.responseText);
+            };
+        }
+
+        xhr.open('POST', url, true);
+        xhr.send({
+            username: 'alex',
+            age: 18
+        });
+    </script>
+</body>
+</html>

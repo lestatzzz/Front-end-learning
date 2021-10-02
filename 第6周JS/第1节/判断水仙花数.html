@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var num = Number(prompt('请输入一个3位数'));
+        // 输入内容合法性检测
+        if (!isNaN(num) && num >= 100 && num <= 999){
+            // 数学方法
+            // var num_Gewei = num % 10;
+            // var num_Shiwei = Math.floor(num % 100 / 10);
+            // var num_Baiwei = Math.floor(num / 100);
+            //字符串方法
+            var num_str = num.toString();
+            var num_Baiwei = Number(num_str.charAt(0));
+            var num_Shiwei = Number(num_str.charAt(1));
+            var num_Gewei = Number(num_str.charAt(2));
+            if (num == Math.pow(num_Gewei, 3) + Math.pow(num_Shiwei, 3) + Math.pow(num_Baiwei, 3)) {
+                alert(num + '是水仙花数');
+            } else {
+                alert(num + '不是水仙花数');
+            }
+        } else {
+            alert('您输入的内容不合法')
+        }
+
+        // 循环找水仙花数
+        // for (var num = 100; num <=999; num++) {
+        //     var num_Gewei = num % 10;
+        //     var num_Shiwei = Math.floor(num % 100 / 10);
+        //     var num_Baiwei = Math.floor(num / 100);
+        //     if (num == Math.pow(num_Gewei, 3) + Math.pow(num_Shiwei, 3) + Math.pow(num_Baiwei, 3)) {
+        //         console.log(num + '是水仙花数');
+        //     } 
+        // }
+    </script>
+</body>
+</html>

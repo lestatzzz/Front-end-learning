@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box p{
+            width: 60px;
+            height: 60px;
+            background-color: orange;
+            margin-bottom: 10px;
+            position: relative;
+            left: 0;
+            transition: left 5s linear 0s;
+        }
+        .box P:nth-child(2) {
+            transition-timing-function: ease;
+        }
+        .box P:nth-child(3) {
+            transition-timing-function: ease-in;
+        }
+        .box P:nth-child(4) {
+            transition-timing-function: ease-out;
+        }
+        .box P:nth-child(5) {
+            transition-timing-function: ease-in-out;
+        }
+        .box P:nth-child(6) {
+            transition-timing-function: cubic-bezier(.68,-0.99,.23,1.32);
+        }
+        .box:hover p {
+            left: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</body>
+</html>

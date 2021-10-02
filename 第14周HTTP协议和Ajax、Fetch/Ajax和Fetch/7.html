@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON的常用方法</title>
+</head>
+<body>
+    <script type = "module">
+        // 1. JSON.parse():
+        // JSON.parse()可以将JSON格式的字符串解析成JS中的对应值
+        // 2. JSON.stringify()
+        // JSON.stringify()可以将JS的基本数据类型、对象或者数组转换成JSON格式的字符串
+        // const url = 'https://www.imooc.com/api/http/search/suggest?word=js';
+        // const xhr = new XMLHttpRequest();
+        
+        // xhr.onreadystatechange = () => {
+        //     if (xhr.readyState !== 4) {
+        //         return;
+        //     };
+            
+        //     if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+        //         console.log(xhr.responseText);
+        //         console.log(typeof xhr.responseText);
+                
+        //         console.log(JSON.parse(xhr.responseText));
+        //         // console.log(JSON.parse(xhr.responseText).data);
+        //     };
+        // }
+        
+        // xhr.open('GET', url, true);
+        // xhr.open('GET', './plain.json', true);
+        // xhr.open('GET', './obj.json', true);
+        // xhr.open('GET', './array.json', true);
+        // xhr.send(null);
+        // xhr.open('POST', url, true);
+        // xhr.send(JSON.stringify({
+        //     username: 'alex',
+        //     age: 18
+        // }));
+
+
+        // 3. 使用这两种方法封装localStorage
+        import {set, get, remove, clear} from "./storage.js";
+        set('username', 'alex');
+        console.log(get('username'));
+
+        set('zs', {
+            name:'章三',
+            age:18
+        });
+
+        console.log(get('zs'))
+
+        remove('username');
+
+        clear()
+    </script>
+</body>
+</html>

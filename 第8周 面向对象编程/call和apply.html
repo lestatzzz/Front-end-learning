@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum() {
+        //     alert(this.chinese + this.math + this.english);
+        // };
+        function sum(b1, b2) {
+            alert(this.chinese + this.math + this.english + b1 + b2);
+        };
+
+        var xiaoming = {
+            chinese: 100,
+            math: 90,
+            english: 80
+        };
+
+        sum.call(xiaoming, 3, 5);
+        sum.apply(xiaoming, [3, 5]);
+    </script>
+</body>
+</html>

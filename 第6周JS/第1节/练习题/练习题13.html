@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number;
+        while (number != 5) {
+            number = Number(prompt('请输入您猜的数字'));
+            if (number < 5) {
+                alert('猜小了');
+            } else if (number > 5) {
+                alert('猜大了');
+            } else {
+                alert('猜对了!');
+            }
+        }
+    </script>
+</body>
+</html>

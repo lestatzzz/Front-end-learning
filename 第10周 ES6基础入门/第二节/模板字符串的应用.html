@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px 0 0 300px;
+            font-size: 22px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>学生信息表</p>
+    <ul id="list">
+        <li>信息加载中....</li>
+    </ul>
+
+    <script>
+        const students = [
+            {
+                username: 'Alex',
+                age: 18,
+                sex: 'male'
+            },
+
+            {
+                username: 'ZhangSan',
+                age: 28,
+                sex: 'male'
+            },
+
+            {
+                username: 'XiaoHong',
+                age: 20,
+                sex: 'female'
+            }
+        ];
+
+        const list = document.getElementById('list');
+
+        let html = '';
+
+        for (let i = 0; i < students.length; i++) {
+            html += `<li>我的名字是:${students[i].username}, 我今年${students[i].age}岁了, ${students[i].sex}</li>`
+        }
+        list.innerHTML = html;
+    </script>
+</body>
+
+</html>

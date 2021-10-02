@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var weight = Number(prompt('请输入体重（kg）'));
+        var height = Number(prompt('请输入身高（m）'));
+        var BMI_index = weight / Math.pow(height, 2);
+
+        alert('您的BMI指数为' + BMI_index);
+        
+        if (BMI_index < 18.5){
+            alert('过瘦');
+        } else if (BMI_index < 24) {
+            alert('正常');
+        } else if (BMI_index < 28) {
+            alert('过胖');
+        } else if (BMI_index < 32) {
+            alert('肥胖');
+        } else {
+            alert('非常肥胖');
+        }
+    </script>
+</body>
+</html>

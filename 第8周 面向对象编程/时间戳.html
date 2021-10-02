@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 日期对象
+        var d = new Date();
+
+        // 显示时间戳
+        var timestamp1 = d.getTime();  
+        var timestamp2 = Date.parse(d);
+
+        console.log(timestamp1);
+        console.log(timestamp2);
+
+        // 如何把时间戳变为日期
+        var dd = new Date(timestamp1);
+        console.log(dd);
+    </script>
+</body>
+</html>

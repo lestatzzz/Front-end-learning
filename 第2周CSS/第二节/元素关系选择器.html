@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子选择器 */
+        .box>p {
+            color: red;
+        }
+        /* 相邻兄弟选择器 */
+        p+span {
+            color: red;
+        }
+        /* 通用兄弟选择器 */
+        h2~span {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子选择器 -->
+    <div class="box">
+        <p>我是段落</p>
+        <p>我是段落</p>
+        <div>
+            <p>我是段落</p>
+            <p>我是段落</p>
+        </div>
+    </div>
+
+    <!-- 相邻兄弟选择器 -->
+    <div class="box1">
+        <p>我是段落1</p>
+        <span>我是span</span>
+        <span>我是span</span>
+        <div>
+            <p>我是段落1</p>
+            <span>我是span</span>
+        </div>
+        <span>我是span</span>
+    </div>
+
+    <!-- 通用兄弟选择器 -->
+    <div class="box2">
+        <span>我是span2</span>
+        <h2>我是二级标题</h2>
+        <span>我是span2</span>
+        <span>我是span2</span>
+        <span>我是span2</span>
+        <span>我是span2</span>
+        <p>我是段落2</p>
+        <span>我是span2</span>
+        <span>我是span2</span>
+        <div>
+            <span>我是span2</span>
+            <span>我是span2</span>
+        </div>
+    </div>
+</body>
+</html>

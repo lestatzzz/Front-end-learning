@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            fn1: function() {
+                console.log(this);
+            },
+
+            fn2: test
+        }
+
+        function test () {
+            console.log(this);
+            setTimeout(function() {
+                console.log(this);
+            })
+        }
+
+        const res = obj.fn1;
+        res();
+        obj.fn2();
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 案例1:寻找100以内既能被3整除也能被5整除的数字
+        // for (var i = 1; i < 100; i++) {
+        //     if (i % 15 == 0) {
+        //         console.log(i);
+        //     }
+        // }
+
+        // 案例2:输入一个数字,寻找这个数字的全部约数
+        // var n = Number(prompt('请输入一个数字'));
+        // for (var i = 1; i <= n; i++) {
+        //     if (n % i == 0) {
+        //         console.log(i);
+        //     }
+        // }
+
+        // 案例3:寻找全部的水仙花数
+        for (var num = 100; num <=999; num++) {
+            // 数学方法
+            // var num_Gewei = num % 10;
+            // var num_Shiwei = Math.floor(num % 100 / 10);
+            // var num_Baiwei = Math.floor(num / 100);
+            
+            //字符串方法
+            var num_str = num.toString();
+            var num_Baiwei = Number(num_str.charAt(0));
+            var num_Shiwei = Number(num_str.charAt(1));
+            var num_Gewei = Number(num_str.charAt(2));
+            if (num == Math.pow(num_Gewei, 3) + Math.pow(num_Shiwei, 3) + Math.pow(num_Baiwei, 3)) {
+                console.log(num + '是水仙花数');
+            } 
+        }
+        
+    </script>
+</body>
+
+</html>

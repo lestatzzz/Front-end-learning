@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.输出多行字符串
+        // 一般字符串
+        // const info = '第一行 \n第二行';
+        // console.log(info);
+        
+        // 模板字符串
+        // const info = `第一行
+        // 第二行`;
+        // console.log(info);
+
+        // 2. 输出`和\等特殊字符
+        // const info = `123\`123\`\\`;
+        // console.log(info);
+
+        // 3. 模板字符串的注入
+        const username = 'alex';
+        const person = {age: 18, sex: 'male'};
+        const getSex = function(sex) {
+            return sex === 'male' ? '男':'女';
+        };
+
+        const info = `${username}, ${person.age + 2}, ${getSex(person.sex)}`;
+        console.log(info);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1;
+        var b = 2;
+        function fun() {
+            c = 3;           // 全局变量
+            var b = 4;
+            b++;
+            console.log(b);  // 5
+            c++;
+        }
+        fun();
+        console.log(b);  // 2
+        console.log(c);  // 4
+    </script>
+</body>
+
+</html>

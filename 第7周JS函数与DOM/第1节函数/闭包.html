@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun() {
+            // 定义局部变量
+            var name = '慕课网';
+            // 定义一个局部函数
+            function innerfun() {
+                alert(name);
+            }
+            // 返回局部函数
+            return innerfun;
+        }
+
+        // 调用外部函数,就能得到内部函数,用变量inn来接收
+        var inn = fun();
+        // 执行inn函数,就相当于在fun函数的外部,执行了内部函数
+        inn();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        outer: for (var i = 2; i <= 100; i++) {
+            // 内层循环开始从2开始尝试除i,如果能被整除,就可以筛选下一个数字
+            for (var j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    // 说明i不是质数,可以筛选下一个数字
+                    // 给最外层的for循环加上label,使用continue继续外层循环的下一次迭代
+                    continue outer;
+                }
+            }
+            // 能够遇见这条语句的数字都是质数
+            console.log(i);
+        }
+    </script>
+</body>
+</html>
